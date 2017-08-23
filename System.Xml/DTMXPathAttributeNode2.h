@@ -1,0 +1,22 @@
+#pragma once
+
+namespace Mono
+{
+	namespace Xml
+{
+{
+		namespace XPath
+{
+	class DTMXPathAttributeNode2 : public ValueType // 0x0
+	{
+	public:
+		int OwnerElement; // 0x10 (size: 0x4, flags: 0x6, type: 0x8)
+		int NextAttribute; // 0x14 (size: 0x4, flags: 0x6, type: 0x8)
+		int LocalName; // 0x18 (size: 0x4, flags: 0x6, type: 0x8)
+		int NamespaceURI; // 0x1c (size: 0x4, flags: 0x6, type: 0x8)
+		int Prefix; // 0x20 (size: 0x4, flags: 0x6, type: 0x8)
+		int Value; // 0x24 (size: 0x4, flags: 0x6, type: 0x8)
+		int LineNumber; // 0x28 (size: 0x4, flags: 0x6, type: 0x8)
+		int LinePosition; // 0x2c (size: 0x4, flags: 0x6, type: 0x8)
+	}; // size = 0x30
+}

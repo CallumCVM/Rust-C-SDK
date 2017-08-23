@@ -1,0 +1,37 @@
+#pragma once
+
+#include "..\Ionic\Zlib\InflateBlocks\InflateBlockMode.h"
+#include "..\Ionic\Zlib\InflateCodes.h"
+#include "..\Ionic\Zlib\ZlibCodec.h"
+#include "..\System\Object.h"
+#include "..\Ionic\Zlib\InfTree.h"
+
+namespace Ionic
+{
+	namespace Zlib
+{
+	class InflateBlocks : public Object // 0x0
+	{
+	public:
+		int* blens; // 0x10 (size: 0x8, flags: 0x3, type: 0x1d)
+		int* bb; // 0x18 (size: 0x8, flags: 0x3, type: 0x1d)
+		int* tb; // 0x20 (size: 0x8, flags: 0x3, type: 0x1d)
+		Ionic::Zlib::InflateCodes* codes; // 0x28 (size: 0x8, flags: 0x3, type: 0x12)
+		Ionic::Zlib::ZlibCodec* _codec; // 0x30 (size: 0x8, flags: 0x3, type: 0x12)
+		int* hufts; // 0x38 (size: 0x8, flags: 0x3, type: 0x1d)
+		unsigned char* window; // 0x40 (size: 0x8, flags: 0x3, type: 0x1d)
+		System::Object checkfn; // 0x48 (size: 0x8, flags: 0x3, type: 0x1c)
+		Ionic::Zlib::InfTree* inftree; // 0x50 (size: 0x8, flags: 0x3, type: 0x12)
+		Ionic::Zlib::InflateBlocks::InflateBlockMode mode; // 0x58 (size: 0x4, flags: 0x1, type: 0x11)
+		int left; // 0x5c (size: 0x4, flags: 0x3, type: 0x8)
+		int table; // 0x60 (size: 0x4, flags: 0x3, type: 0x8)
+		int index; // 0x64 (size: 0x4, flags: 0x3, type: 0x8)
+		int last; // 0x68 (size: 0x4, flags: 0x3, type: 0x8)
+		int bitk; // 0x6c (size: 0x4, flags: 0x3, type: 0x8)
+		int bitb; // 0x70 (size: 0x4, flags: 0x3, type: 0x8)
+		int end; // 0x74 (size: 0x4, flags: 0x3, type: 0x8)
+		int readAt; // 0x78 (size: 0x4, flags: 0x3, type: 0x8)
+		int writeAt; // 0x7c (size: 0x4, flags: 0x3, type: 0x8)
+		unsigned int check; // 0x80 (size: 0x4, flags: 0x3, type: 0x9)
+	}; // size = 0x88
+}

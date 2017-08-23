@@ -1,0 +1,13 @@
+#pragma once
+
+namespace rust 
+{
+	class TOD_CycleParameters : public Object // 0x0
+	{
+	public:
+		float Hour; // 0x10 (size: 0x4, flags: 0x6, type: 0xc)
+		int Day; // 0x14 (size: 0x4, flags: 0x6, type: 0x8)
+		int Month; // 0x18 (size: 0x4, flags: 0x6, type: 0x8)
+		int Year; // 0x1c (size: 0x4, flags: 0x6, type: 0x8)
+	}; // size = 0x20
+}

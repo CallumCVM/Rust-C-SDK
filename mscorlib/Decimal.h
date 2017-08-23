@@ -1,0 +1,13 @@
+#pragma once
+
+namespace System
+{
+	class Decimal : public ValueType // 0x0
+	{
+	public:
+		unsigned int flags; // 0x10 (size: 0x4, flags: 0x1, type: 0x9)
+		unsigned int hi; // 0x14 (size: 0x4, flags: 0x1, type: 0x9)
+		unsigned int lo; // 0x18 (size: 0x4, flags: 0x1, type: 0x9)
+		unsigned int mid; // 0x1c (size: 0x4, flags: 0x1, type: 0x9)
+	}; // size = 0x20
+}

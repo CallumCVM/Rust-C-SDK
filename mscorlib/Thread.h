@@ -1,0 +1,65 @@
+#pragma once
+
+#include "..\System\Object.h"
+#include "..\System\Threading\ThreadState.h"
+#include "..\System\UIntPtr.h"
+#include "..\System\Threading\ExecutionContext.h"
+#include "..\System\MulticastDelegate.h"
+#include "..\System\Security\Principal\IPrincipal.h"
+
+namespace System
+{
+	namespace Threading
+{
+	class Thread : public CriticalFinalizerObject // 0x0
+	{
+	public:
+		int lock_thread_id; // 0x10 (size: 0x4, flags: 0x1, type: 0x8)
+		__int64 system_thread_handle; // 0x18 (size: 0x8, flags: 0x1, type: 0x18)
+		System::Object cached_culture_info; // 0x20 (size: 0x8, flags: 0x1, type: 0x1c)
+		__int64 unused0; // 0x28 (size: 0x8, flags: 0x1, type: 0x18)
+		bool threadpool_thread; // 0x30 (size: 0x1, flags: 0x1, type: 0x2)
+		__int64 name; // 0x38 (size: 0x8, flags: 0x1, type: 0x18)
+		int name_len; // 0x40 (size: 0x4, flags: 0x1, type: 0x8)
+		System::Threading::ThreadState state; // 0x44 (size: 0x4, flags: 0x1, type: 0x11)
+		System::Object abort_exc; // 0x48 (size: 0x8, flags: 0x1, type: 0x1c)
+		int abort_state_handle; // 0x50 (size: 0x4, flags: 0x1, type: 0x8)
+		__int64 thread_id; // 0x58 (size: 0x8, flags: 0x1, type: 0xa)
+		__int64 start_notify; // 0x60 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 stack_ptr; // 0x68 (size: 0x8, flags: 0x1, type: 0x18)
+		System::UIntPtr static_data; // 0x70 (size: 0x8, flags: 0x1, type: 0x19)
+		__int64 jit_data; // 0x78 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 lock_data; // 0x80 (size: 0x8, flags: 0x1, type: 0x18)
+		System::Object current_appcontext; // 0x88 (size: 0x8, flags: 0x1, type: 0x1c)
+		int stack_size; // 0x90 (size: 0x4, flags: 0x1, type: 0x8)
+		System::Object start_obj; // 0x98 (size: 0x8, flags: 0x1, type: 0x1c)
+		__int64 appdomain_refs; // 0xa0 (size: 0x8, flags: 0x1, type: 0x18)
+		int interruption_requested; // 0xa8 (size: 0x4, flags: 0x1, type: 0x8)
+		__int64 suspend_event; // 0xb0 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 suspended_event; // 0xb8 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 resume_event; // 0xc0 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 synch_cs; // 0xc8 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 serialized_culture_info; // 0xd0 (size: 0x8, flags: 0x1, type: 0x18)
+		int serialized_culture_info_len; // 0xd8 (size: 0x4, flags: 0x1, type: 0x8)
+		__int64 serialized_ui_culture_info; // 0xe0 (size: 0x8, flags: 0x1, type: 0x18)
+		int serialized_ui_culture_info_len; // 0xe8 (size: 0x4, flags: 0x1, type: 0x8)
+		bool thread_dump_requested; // 0xec (size: 0x1, flags: 0x1, type: 0x2)
+		__int64 end_stack; // 0xf0 (size: 0x8, flags: 0x1, type: 0x18)
+		bool thread_interrupt_requested; // 0xf8 (size: 0x1, flags: 0x1, type: 0x2)
+		unsigned char apartment_state; // 0xf9 (size: 0x1, flags: 0x1, type: 0x5)
+		int critical_region_level; // 0xfc (size: 0x4, flags: 0x1, type: 0x8)
+		int small_id; // 0x100 (size: 0x4, flags: 0x1, type: 0x8)
+		__int64 manage_callback; // 0x108 (size: 0x8, flags: 0x1, type: 0x18)
+		System::Object pending_exception; // 0x110 (size: 0x8, flags: 0x1, type: 0x1c)
+		System::Threading::ExecutionContext* ec_to_set; // 0x118 (size: 0x8, flags: 0x1, type: 0x12)
+		__int64 interrupt_on_stop; // 0x120 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 unused3; // 0x128 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 unused4; // 0x130 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 unused5; // 0x138 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 unused6; // 0x140 (size: 0x8, flags: 0x1, type: 0x18)
+		System::MulticastDelegate* threadstart; // 0x148 (size: 0x8, flags: 0x1, type: 0x12)
+		int managed_id; // 0x150 (size: 0x4, flags: 0x1, type: 0x8)
+		System::Security::Principal::IPrincipal* _principal; // 0x158 (size: 0x8, flags: 0x1, type: 0x12)
+		bool in_currentculture; // 0x160 (size: 0x1, flags: 0x1, type: 0x2)
+	}; // size = 0x168
+}

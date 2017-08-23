@@ -1,0 +1,18 @@
+#pragma once
+
+namespace System
+{
+	namespace Threading
+{
+	class NativeOverlapped : public ValueType // 0x0
+	{
+	public:
+		__int64 EventHandle; // 0x10 (size: 0x8, flags: 0x6, type: 0x18)
+		__int64 InternalHigh; // 0x18 (size: 0x8, flags: 0x6, type: 0x18)
+		__int64 InternalLow; // 0x20 (size: 0x8, flags: 0x6, type: 0x18)
+		int OffsetHigh; // 0x28 (size: 0x4, flags: 0x6, type: 0x8)
+		int OffsetLow; // 0x2c (size: 0x4, flags: 0x6, type: 0x8)
+		int Handle1; // 0x30 (size: 0x4, flags: 0x3, type: 0x8)
+		int Handle2; // 0x34 (size: 0x4, flags: 0x3, type: 0x8)
+	}; // size = 0x38
+}

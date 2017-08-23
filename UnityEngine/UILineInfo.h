@@ -1,0 +1,13 @@
+#pragma once
+
+namespace UnityEngine
+{
+	class UILineInfo : public ValueType // 0x0
+	{
+	public:
+		int startCharIdx; // 0x10 (size: 0x4, flags: 0x6, type: 0x8)
+		int height; // 0x14 (size: 0x4, flags: 0x6, type: 0x8)
+		float topY; // 0x18 (size: 0x4, flags: 0x6, type: 0xc)
+		float leading; // 0x1c (size: 0x4, flags: 0x6, type: 0xc)
+	}; // size = 0x20
+}

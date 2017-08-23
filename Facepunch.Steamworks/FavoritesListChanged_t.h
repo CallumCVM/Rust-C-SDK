@@ -1,0 +1,16 @@
+#pragma once
+
+namespace SteamNative
+{
+	class FavoritesListChanged_t : public ValueType // 0x0
+	{
+	public:
+		unsigned int IP; // 0x10 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int QueryPort; // 0x14 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int ConnPort; // 0x18 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int AppID; // 0x1c (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int Flags; // 0x20 (size: 0x4, flags: 0x6, type: 0x9)
+		bool Add; // 0x24 (size: 0x1, flags: 0x1006, type: 0x2)
+		unsigned int AccountId; // 0x28 (size: 0x4, flags: 0x6, type: 0x9)
+	}; // size = 0x30
+}

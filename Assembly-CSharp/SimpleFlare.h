@@ -1,0 +1,35 @@
+#pragma once
+
+#include "..\UnityEngine\Collider.h"
+#include "..\UnityEngine\Vector3.h"
+#include "..\UnityEngine\List.h"
+#include "..\UnityEngine\Renderer.h"
+
+namespace rust 
+{
+	class SimpleFlare : public BaseMonoBehaviour // 0x18
+	{
+	public:
+		UnityEngine::Collider* checkCollider; // 0x18 (size: 0x8, flags: 0x6, type: 0x12)
+		UnityEngine::List<BasePlayer>* players; // 0x20 (size: 0x8, flags: 0x1, type: 0x15)
+		UnityEngine::Renderer* renderer; // 0x28 (size: 0x8, flags: 0x1, type: 0x12)
+		bool timeShimmer; // 0x30 (size: 0x1, flags: 0x6, type: 0x2)
+		bool positionalShimmer; // 0x31 (size: 0x1, flags: 0x6, type: 0x2)
+		bool rotate; // 0x32 (size: 0x1, flags: 0x6, type: 0x2)
+		float fadeSpeed; // 0x34 (size: 0x4, flags: 0x6, type: 0xc)
+		float maxVisibleDistance; // 0x38 (size: 0x4, flags: 0x6, type: 0xc)
+		bool lightScaled; // 0x3c (size: 0x1, flags: 0x6, type: 0x2)
+		bool alignToCameraViaScript; // 0x3d (size: 0x1, flags: 0x6, type: 0x2)
+		float tickRate; // 0x40 (size: 0x4, flags: 0x4, type: 0xc)
+		UnityEngine::Vector3 fullSize; // 0x44 (size: 0xc, flags: 0x1, type: 0x11)
+		float visibleFraction; // 0x50 (size: 0x4, flags: 0x1, type: 0xc)
+		bool faceCameraPos; // 0x54 (size: 0x1, flags: 0x6, type: 0x2)
+		bool billboardViaShader; // 0x55 (size: 0x1, flags: 0x6, type: 0x2)
+		float artificialLightExposure; // 0x58 (size: 0x4, flags: 0x1, type: 0xc)
+		float privateRand; // 0x5c (size: 0x4, flags: 0x1, type: 0xc)
+		float dotMin; // 0x60 (size: 0x4, flags: 0x6, type: 0xc)
+		float dotMax; // 0x64 (size: 0x4, flags: 0x6, type: 0xc)
+		bool destroying; // 0x68 (size: 0x1, flags: 0x1, type: 0x2)
+		float nextVisUpdateTime; // 0x6c (size: 0x4, flags: 0x1, type: 0xc)
+	}; // size = 0x70
+}

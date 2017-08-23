@@ -1,0 +1,13 @@
+#pragma once
+
+namespace System
+{
+	class ArgIterator : public ValueType // 0x0
+	{
+	public:
+		__int64 sig; // 0x10 (size: 0x8, flags: 0x1, type: 0x18)
+		__int64 args; // 0x18 (size: 0x8, flags: 0x1, type: 0x18)
+		int next_arg; // 0x20 (size: 0x4, flags: 0x1, type: 0x8)
+		int num_args; // 0x24 (size: 0x4, flags: 0x1, type: 0x8)
+	}; // size = 0x28
+}

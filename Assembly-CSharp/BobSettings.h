@@ -1,0 +1,14 @@
+#pragma once
+
+namespace rust 
+{
+	class BobSettings : public ValueType // 0x0
+	{
+	public:
+		float bobSpeed; // 0x10 (size: 0x4, flags: 0x6, type: 0xc)
+		float bobAmount; // 0x14 (size: 0x4, flags: 0x6, type: 0xc)
+		float offsetLateral; // 0x18 (size: 0x4, flags: 0x6, type: 0xc)
+		float bobRotate; // 0x1c (size: 0x4, flags: 0x6, type: 0xc)
+		float effectAmount; // 0x20 (size: 0x4, flags: 0x6, type: 0xc)
+	}; // size = 0x28
+}

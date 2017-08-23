@@ -1,0 +1,33 @@
+#pragma once
+
+#include "..\Ionic\BZip2\BZip2Compressor\CompressionState.h"
+#include "..\Ionic\Crc\CRC32.h"
+#include "..\Ionic\BZip2\BitWriter.h"
+
+namespace Ionic
+{
+	namespace BZip2
+{
+	class BZip2Compressor : public Object // 0x0
+	{
+	public:
+		Ionic::BZip2::BZip2Compressor::CompressionState* cstate; // 0x10 (size: 0x8, flags: 0x1, type: 0x12)
+		Ionic::Crc::CRC32* crc; // 0x18 (size: 0x8, flags: 0x21, type: 0x12)
+		Ionic::BZip2::BitWriter* bw; // 0x20 (size: 0x8, flags: 0x1, type: 0x12)
+		int blockSize100k; // 0x28 (size: 0x4, flags: 0x1, type: 0x8)
+		int currentByte; // 0x2c (size: 0x4, flags: 0x1, type: 0x8)
+		int runLength; // 0x30 (size: 0x4, flags: 0x1, type: 0x8)
+		int last; // 0x34 (size: 0x4, flags: 0x1, type: 0x8)
+		int outBlockFillThreshold; // 0x38 (size: 0x4, flags: 0x1, type: 0x8)
+		int runs; // 0x3c (size: 0x4, flags: 0x1, type: 0x8)
+		int workDone; // 0x40 (size: 0x4, flags: 0x1, type: 0x8)
+		int workLimit; // 0x44 (size: 0x4, flags: 0x1, type: 0x8)
+		bool firstAttempt; // 0x48 (size: 0x1, flags: 0x1, type: 0x2)
+		bool blockRandomised; // 0x49 (size: 0x1, flags: 0x1, type: 0x2)
+		int origPtr; // 0x4c (size: 0x4, flags: 0x1, type: 0x8)
+		int nInUse; // 0x50 (size: 0x4, flags: 0x1, type: 0x8)
+		int nMTF; // 0x54 (size: 0x4, flags: 0x1, type: 0x8)
+		unsigned int <Crc32>k__BackingField; // 0x58 (size: 0x4, flags: 0x1, type: 0x9)
+		int <AvailableBytesOut>k__BackingField; // 0x5c (size: 0x4, flags: 0x1, type: 0x8)
+	}; // size = 0x60
+}

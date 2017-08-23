@@ -1,0 +1,20 @@
+#pragma once
+
+#include "..\UnityEngine\LayerMask.h"
+
+namespace UnityEngine
+{
+	class ContactFilter2D : public ValueType // 0x0
+	{
+	public:
+		bool useTriggers; // 0x10 (size: 0x1, flags: 0x6, type: 0x2)
+		bool useLayerMask; // 0x11 (size: 0x1, flags: 0x6, type: 0x2)
+		bool useDepth; // 0x12 (size: 0x1, flags: 0x6, type: 0x2)
+		bool useNormalAngle; // 0x13 (size: 0x1, flags: 0x6, type: 0x2)
+		UnityEngine::LayerMask layerMask; // 0x14 (size: 0x4, flags: 0x6, type: 0x11)
+		float minDepth; // 0x18 (size: 0x4, flags: 0x6, type: 0xc)
+		float maxDepth; // 0x1c (size: 0x4, flags: 0x6, type: 0xc)
+		float minNormalAngle; // 0x20 (size: 0x4, flags: 0x6, type: 0xc)
+		float maxNormalAngle; // 0x24 (size: 0x4, flags: 0x6, type: 0xc)
+	}; // size = 0x28
+}

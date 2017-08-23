@@ -1,0 +1,29 @@
+#pragma once
+
+#include "..\Newtonsoft\Json\Utilities\ParserTimeZone.h"
+#include "..\System\Char.h"
+
+namespace Newtonsoft
+{
+	namespace Json
+{
+{
+		namespace Utilities
+{
+	class DateTimeParser : public ValueType // 0x0
+	{
+	public:
+		int Year; // 0x10 (size: 0x4, flags: 0x6, type: 0x8)
+		int Month; // 0x14 (size: 0x4, flags: 0x6, type: 0x8)
+		int Day; // 0x18 (size: 0x4, flags: 0x6, type: 0x8)
+		int Hour; // 0x1c (size: 0x4, flags: 0x6, type: 0x8)
+		int Minute; // 0x20 (size: 0x4, flags: 0x6, type: 0x8)
+		int Second; // 0x24 (size: 0x4, flags: 0x6, type: 0x8)
+		int Fraction; // 0x28 (size: 0x4, flags: 0x6, type: 0x8)
+		int ZoneHour; // 0x2c (size: 0x4, flags: 0x6, type: 0x8)
+		int ZoneMinute; // 0x30 (size: 0x4, flags: 0x6, type: 0x8)
+		Newtonsoft::Json::Utilities::ParserTimeZone Zone; // 0x34 (size: 0x4, flags: 0x6, type: 0x11)
+		System::Char* _text; // 0x38 (size: 0x8, flags: 0x1, type: 0x1d)
+		int _end; // 0x40 (size: 0x4, flags: 0x1, type: 0x8)
+	}; // size = 0x48
+}

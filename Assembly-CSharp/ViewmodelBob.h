@@ -1,0 +1,25 @@
+#pragma once
+
+#include "..\UnityEngine\Vector3.h"
+
+namespace rust 
+{
+	class ViewmodelBob : public MonoBehaviour // 0x18
+	{
+	public:
+		float bobSpeedWalk; // 0x18 (size: 0x4, flags: 0x3, type: 0xc)
+		float bobSpeedRun; // 0x1c (size: 0x4, flags: 0x3, type: 0xc)
+		float bobAmountWalk; // 0x20 (size: 0x4, flags: 0x3, type: 0xc)
+		float bobAmountRun; // 0x24 (size: 0x4, flags: 0x3, type: 0xc)
+		float leftOffsetRun; // 0x28 (size: 0x4, flags: 0x3, type: 0xc)
+		float bobAmountRotateYaw; // 0x2c (size: 0x4, flags: 0x3, type: 0xc)
+		float bobAmountRotateRoll; // 0x30 (size: 0x4, flags: 0x3, type: 0xc)
+		UnityEngine::Vector3 lastPosition; // 0x34 (size: 0xc, flags: 0x3, type: 0x11)
+		UnityEngine::Vector3 velocity; // 0x40 (size: 0xc, flags: 0x3, type: 0x11)
+		UnityEngine::Vector3 bobOffset; // 0x4c (size: 0xc, flags: 0x3, type: 0x11)
+		float bobRotateYaw; // 0x58 (size: 0x4, flags: 0x3, type: 0xc)
+		float bobRotateRoll; // 0x5c (size: 0x4, flags: 0x3, type: 0xc)
+		float bobCycle; // 0x60 (size: 0x4, flags: 0x3, type: 0xc)
+		BobSettings smoothedBob; // 0x64 (size: 0x14, flags: 0x3, type: 0x11)
+	}; // size = 0x78
+}

@@ -1,0 +1,13 @@
+#pragma once
+
+namespace rust 
+{
+	class CC_Frost : public CC_Base // 0x28
+	{
+	public:
+		float scale; // 0x28 (size: 0x4, flags: 0x6, type: 0xc)
+		float sharpness; // 0x2c (size: 0x4, flags: 0x6, type: 0xc)
+		float darkness; // 0x30 (size: 0x4, flags: 0x6, type: 0xc)
+		bool enableVignette; // 0x34 (size: 0x1, flags: 0x6, type: 0x2)
+	}; // size = 0x38
+}

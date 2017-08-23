@@ -1,0 +1,29 @@
+#pragma once
+
+#include "..\UnityEngine\List.h"
+#include "..\UnityEngine\RectOffset.h"
+
+namespace UnityEngine
+{
+	class GUILayoutGroup : public GUILayoutEntry // 0x40
+	{
+	public:
+		UnityEngine::List<UnityEngine.GUILayoutEntry>* entries; // 0x40 (size: 0x8, flags: 0x6, type: 0x15)
+		UnityEngine::RectOffset* m_Margin; // 0x48 (size: 0x8, flags: 0x21, type: 0x12)
+		bool isVertical; // 0x50 (size: 0x1, flags: 0x6, type: 0x2)
+		bool resetCoords; // 0x51 (size: 0x1, flags: 0x6, type: 0x2)
+		float spacing; // 0x54 (size: 0x4, flags: 0x6, type: 0xc)
+		bool sameSize; // 0x58 (size: 0x1, flags: 0x6, type: 0x2)
+		bool isWindow; // 0x59 (size: 0x1, flags: 0x6, type: 0x2)
+		int windowID; // 0x5c (size: 0x4, flags: 0x6, type: 0x8)
+		int m_Cursor; // 0x60 (size: 0x4, flags: 0x1, type: 0x8)
+		int m_StretchableCountX; // 0x64 (size: 0x4, flags: 0x4, type: 0x8)
+		int m_StretchableCountY; // 0x68 (size: 0x4, flags: 0x4, type: 0x8)
+		bool m_UserSpecifiedWidth; // 0x6c (size: 0x1, flags: 0x4, type: 0x2)
+		bool m_UserSpecifiedHeight; // 0x6d (size: 0x1, flags: 0x4, type: 0x2)
+		float m_ChildMinWidth; // 0x70 (size: 0x4, flags: 0x4, type: 0xc)
+		float m_ChildMaxWidth; // 0x74 (size: 0x4, flags: 0x4, type: 0xc)
+		float m_ChildMinHeight; // 0x78 (size: 0x4, flags: 0x4, type: 0xc)
+		float m_ChildMaxHeight; // 0x7c (size: 0x4, flags: 0x4, type: 0xc)
+	}; // size = 0x80
+}

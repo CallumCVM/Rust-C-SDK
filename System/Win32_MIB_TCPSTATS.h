@@ -1,0 +1,29 @@
+#pragma once
+
+namespace System
+{
+	namespace Net
+{
+{
+		namespace NetworkInformation
+{
+	class Win32_MIB_TCPSTATS : public ValueType // 0x0
+	{
+	public:
+		unsigned int RtoAlgorithm; // 0x10 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int RtoMin; // 0x14 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int RtoMax; // 0x18 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int MaxConn; // 0x1c (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int ActiveOpens; // 0x20 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int PassiveOpens; // 0x24 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int AttemptFails; // 0x28 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int EstabResets; // 0x2c (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int CurrEstab; // 0x30 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int InSegs; // 0x34 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int OutSegs; // 0x38 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int RetransSegs; // 0x3c (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int InErrs; // 0x40 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int OutRsts; // 0x44 (size: 0x4, flags: 0x6, type: 0x9)
+		unsigned int NumConns; // 0x48 (size: 0x4, flags: 0x6, type: 0x9)
+	}; // size = 0x50
+}

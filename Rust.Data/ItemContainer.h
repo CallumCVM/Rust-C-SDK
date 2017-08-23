@@ -1,0 +1,22 @@
+#pragma once
+
+#include "..\UnityEngine\List.h"
+
+namespace ProtoBuf
+{
+	class ItemContainer : public Object // 0x0
+	{
+	public:
+		UnityEngine::List<int>* availableSlots; // 0x10 (size: 0x8, flags: 0x86, type: 0x15)
+		UnityEngine::List<ProtoBuf.Item>* contents; // 0x18 (size: 0x8, flags: 0x86, type: 0x15)
+		unsigned int UID; // 0x20 (size: 0x4, flags: 0x86, type: 0x9)
+		int slots; // 0x24 (size: 0x4, flags: 0x86, type: 0x8)
+		float temperature; // 0x28 (size: 0x4, flags: 0x86, type: 0xc)
+		int flags; // 0x2c (size: 0x4, flags: 0x86, type: 0x8)
+		int allowedContents; // 0x30 (size: 0x4, flags: 0x86, type: 0x8)
+		int maxStackSize; // 0x34 (size: 0x4, flags: 0x86, type: 0x8)
+		int allowedItem; // 0x38 (size: 0x4, flags: 0x86, type: 0x8)
+		bool ShouldPool; // 0x3c (size: 0x1, flags: 0x6, type: 0x2)
+		bool _disposed; // 0x3d (size: 0x1, flags: 0x1, type: 0x2)
+	}; // size = 0x40
+}

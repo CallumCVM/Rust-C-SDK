@@ -1,0 +1,21 @@
+#pragma once
+
+#include "..\UnityEngine\Vector3.h"
+
+namespace rust 
+{
+	class MegaWireMass : public Object // 0x0
+	{
+	public:
+		UnityEngine::Vector3 pos; // 0x10 (size: 0xc, flags: 0x6, type: 0x11)
+		UnityEngine::Vector3 last; // 0x1c (size: 0xc, flags: 0x6, type: 0x11)
+		UnityEngine::Vector3 force; // 0x28 (size: 0xc, flags: 0x6, type: 0x11)
+		UnityEngine::Vector3 vel; // 0x34 (size: 0xc, flags: 0x6, type: 0x11)
+		UnityEngine::Vector3 posc; // 0x40 (size: 0xc, flags: 0x6, type: 0x11)
+		UnityEngine::Vector3 velc; // 0x4c (size: 0xc, flags: 0x6, type: 0x11)
+		UnityEngine::Vector3 forcec; // 0x58 (size: 0xc, flags: 0x6, type: 0x11)
+		float mass; // 0x64 (size: 0x4, flags: 0x6, type: 0xc)
+		float oneovermass; // 0x68 (size: 0x4, flags: 0x6, type: 0xc)
+		bool collide; // 0x6c (size: 0x1, flags: 0x6, type: 0x2)
+	}; // size = 0x70
+}

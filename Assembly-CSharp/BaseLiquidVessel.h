@@ -1,0 +1,25 @@
+#pragma once
+
+#include "GameObjectRef.h"
+
+namespace rust 
+{
+	class BaseLiquidVessel : public AttackEntity // 0x1e0
+	{
+	public:
+		GameObjectRef* thrownWaterObject; // 0x1e0 (size: 0x8, flags: 0x6, type: 0x12)
+		GameObjectRef* ThrowEffect3P; // 0x1e8 (size: 0x8, flags: 0x6, type: 0x12)
+		GameObjectRef* fillFromContainer; // 0x1f0 (size: 0x8, flags: 0x6, type: 0x12)
+		GameObjectRef* fillFromWorld; // 0x1f8 (size: 0x8, flags: 0x6, type: 0x12)
+		bool hasLid; // 0x200 (size: 0x1, flags: 0x6, type: 0x2)
+		float throwScale; // 0x204 (size: 0x4, flags: 0x6, type: 0xc)
+		bool canDrinkFrom; // 0x208 (size: 0x1, flags: 0x6, type: 0x2)
+		bool updateVMWater; // 0x209 (size: 0x1, flags: 0x6, type: 0x2)
+		float minThrowFrac; // 0x20c (size: 0x4, flags: 0x6, type: 0xc)
+		bool useThrowAnim; // 0x210 (size: 0x1, flags: 0x6, type: 0x2)
+		float fillMlPerSec; // 0x214 (size: 0x4, flags: 0x6, type: 0xc)
+		float timeSinceLastAttack; // 0x218 (size: 0x4, flags: 0x1, type: 0xc)
+		bool wasFilling; // 0x21c (size: 0x1, flags: 0x1, type: 0x2)
+		float nextFreeTime; // 0x220 (size: 0x4, flags: 0x1, type: 0xc)
+	}; // size = 0x228
+}

@@ -1,0 +1,24 @@
+#pragma once
+
+#include "..\UnityEngine\AudioSource.h"
+
+namespace rust 
+{
+	class PlayerVoiceSpeaker : public EntityComponent`1 // 0x20
+	{
+	public:
+		UnityEngine::AudioSource* mouthSpeaker; // 0x20 (size: 0x8, flags: 0x6, type: 0x12)
+		float* buffer; // 0x28 (size: 0x8, flags: 0x1, type: 0x1d)
+		float* volumeData; // 0x30 (size: 0x8, flags: 0x1, type: 0x1d)
+		float currentVolume; // 0x38 (size: 0x4, flags: 0x86, type: 0xc)
+		unsigned int optimalRate; // 0x3c (size: 0x4, flags: 0x1, type: 0x9)
+		unsigned int bufferSize; // 0x40 (size: 0x4, flags: 0x1, type: 0x9)
+		unsigned int dataReceived; // 0x44 (size: 0x4, flags: 0x1, type: 0x9)
+		unsigned int playbackBuffer; // 0x48 (size: 0x4, flags: 0x1, type: 0x9)
+		unsigned int dataPosition; // 0x4c (size: 0x4, flags: 0x1, type: 0x9)
+		bool Initialized; // 0x50 (size: 0x1, flags: 0x1, type: 0x2)
+		bool isPlaying; // 0x51 (size: 0x1, flags: 0x1, type: 0x2)
+		bool stopping; // 0x52 (size: 0x1, flags: 0x1, type: 0x2)
+		float volumeVelocity; // 0x54 (size: 0x4, flags: 0x3, type: 0xc)
+	}; // size = 0x58
+}

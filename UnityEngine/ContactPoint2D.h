@@ -1,0 +1,22 @@
+#pragma once
+
+#include "..\UnityEngine\Vector2.h"
+
+namespace UnityEngine
+{
+	class ContactPoint2D : public ValueType // 0x0
+	{
+	public:
+		UnityEngine::Vector2 m_Point; // 0x10 (size: 0x8, flags: 0x3, type: 0x11)
+		UnityEngine::Vector2 m_Normal; // 0x18 (size: 0x8, flags: 0x3, type: 0x11)
+		UnityEngine::Vector2 m_RelativeVelocity; // 0x20 (size: 0x8, flags: 0x3, type: 0x11)
+		float m_Separation; // 0x28 (size: 0x4, flags: 0x3, type: 0xc)
+		float m_NormalImpulse; // 0x2c (size: 0x4, flags: 0x3, type: 0xc)
+		float m_TangentImpulse; // 0x30 (size: 0x4, flags: 0x3, type: 0xc)
+		int m_Collider; // 0x34 (size: 0x4, flags: 0x3, type: 0x8)
+		int m_OtherCollider; // 0x38 (size: 0x4, flags: 0x3, type: 0x8)
+		int m_Rigidbody; // 0x3c (size: 0x4, flags: 0x3, type: 0x8)
+		int m_OtherRigidbody; // 0x40 (size: 0x4, flags: 0x3, type: 0x8)
+		int m_Enabled; // 0x44 (size: 0x4, flags: 0x3, type: 0x8)
+	}; // size = 0x48
+}

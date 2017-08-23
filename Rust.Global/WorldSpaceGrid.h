@@ -1,0 +1,19 @@
+#pragma once
+
+#include "T.h"
+
+namespace rust 
+{
+template <typename T0>
+	class WorldSpaceGrid : public Object // 0x0
+	{
+	public:
+		T* Cells; // 0x10 (size: 0x8, flags: 0x6, type: 0x1d)
+		float CellSize; // 0x18 (size: 0x4, flags: 0x6, type: 0xc)
+		float CellSizeHalf; // 0x1c (size: 0x4, flags: 0x6, type: 0xc)
+		float CellSizeInverse; // 0x20 (size: 0x4, flags: 0x6, type: 0xc)
+		float CellArea; // 0x24 (size: 0x4, flags: 0x6, type: 0xc)
+		int CellCount; // 0x28 (size: 0x4, flags: 0x6, type: 0x8)
+		int CellCountHalf; // 0x2c (size: 0x4, flags: 0x6, type: 0x8)
+	}; // size = 0x30
+}

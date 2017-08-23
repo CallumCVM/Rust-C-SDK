@@ -1,0 +1,33 @@
+#pragma once
+
+#include "..\UnityEngine\AnimationCurve.h"
+#include "..\UnityEngine\Renderer.h"
+#include "..\UnityEngine\Material.h"
+
+namespace rust 
+{
+	class ExplosionsSpriteSheetAnimation : public MonoBehaviour // 0x18
+	{
+	public:
+		UnityEngine::AnimationCurve* FrameOverTime; // 0x18 (size: 0x8, flags: 0x6, type: 0x12)
+		UnityEngine::Renderer* currentRenderer; // 0x20 (size: 0x8, flags: 0x1, type: 0x12)
+		UnityEngine::Material* instanceMaterial; // 0x28 (size: 0x8, flags: 0x1, type: 0x12)
+		int TilesX; // 0x30 (size: 0x4, flags: 0x6, type: 0x8)
+		int TilesY; // 0x34 (size: 0x4, flags: 0x6, type: 0x8)
+		float AnimationFPS; // 0x38 (size: 0x4, flags: 0x6, type: 0xc)
+		bool IsInterpolateFrames; // 0x3c (size: 0x1, flags: 0x6, type: 0x2)
+		int StartFrameOffset; // 0x40 (size: 0x4, flags: 0x6, type: 0x8)
+		bool IsLoop; // 0x44 (size: 0x1, flags: 0x6, type: 0x2)
+		float StartDelay; // 0x48 (size: 0x4, flags: 0x6, type: 0xc)
+		bool isInizialised; // 0x4c (size: 0x1, flags: 0x1, type: 0x2)
+		int index; // 0x50 (size: 0x4, flags: 0x1, type: 0x8)
+		int count; // 0x54 (size: 0x4, flags: 0x1, type: 0x8)
+		int allCount; // 0x58 (size: 0x4, flags: 0x1, type: 0x8)
+		float animationLifeTime; // 0x5c (size: 0x4, flags: 0x1, type: 0xc)
+		bool isVisible; // 0x60 (size: 0x1, flags: 0x1, type: 0x2)
+		bool isCorutineStarted; // 0x61 (size: 0x1, flags: 0x1, type: 0x2)
+		float currentInterpolatedTime; // 0x64 (size: 0x4, flags: 0x1, type: 0xc)
+		float animationStartTime; // 0x68 (size: 0x4, flags: 0x1, type: 0xc)
+		bool animationStoped; // 0x6c (size: 0x1, flags: 0x1, type: 0x2)
+	}; // size = 0x70
+}

@@ -1,0 +1,24 @@
+#pragma once
+
+#include "..\UnityEngine\AnimationCurve.h"
+
+namespace rust 
+{
+	class RecoilProperties : public ScriptableObject // 0x18
+	{
+	public:
+		UnityEngine::AnimationCurve* pitchCurve; // 0x18 (size: 0x8, flags: 0x6, type: 0x12)
+		UnityEngine::AnimationCurve* yawCurve; // 0x20 (size: 0x8, flags: 0x6, type: 0x12)
+		float recoilYawMin; // 0x28 (size: 0x4, flags: 0x6, type: 0xc)
+		float recoilYawMax; // 0x2c (size: 0x4, flags: 0x6, type: 0xc)
+		float recoilPitchMin; // 0x30 (size: 0x4, flags: 0x6, type: 0xc)
+		float recoilPitchMax; // 0x34 (size: 0x4, flags: 0x6, type: 0xc)
+		float timeToTakeMin; // 0x38 (size: 0x4, flags: 0x6, type: 0xc)
+		float timeToTakeMax; // 0x3c (size: 0x4, flags: 0x6, type: 0xc)
+		float ADSScale; // 0x40 (size: 0x4, flags: 0x6, type: 0xc)
+		float movementPenalty; // 0x44 (size: 0x4, flags: 0x6, type: 0xc)
+		float clampPitch; // 0x48 (size: 0x4, flags: 0x6, type: 0xc)
+		bool useCurves; // 0x4c (size: 0x1, flags: 0x6, type: 0x2)
+		int shotsUntilMax; // 0x50 (size: 0x4, flags: 0x6, type: 0x8)
+	}; // size = 0x58
+}

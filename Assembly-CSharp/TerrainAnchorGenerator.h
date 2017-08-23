@@ -1,0 +1,17 @@
+#pragma once
+
+namespace rust 
+{
+	class TerrainAnchorGenerator : public MonoBehaviour // 0x18
+	{
+	public:
+		float PlacementRadius; // 0x18 (size: 0x4, flags: 0x6, type: 0xc)
+		float PlacementPadding; // 0x1c (size: 0x4, flags: 0x6, type: 0xc)
+		float PlacementFade; // 0x20 (size: 0x4, flags: 0x6, type: 0xc)
+		float PlacementDistance; // 0x24 (size: 0x4, flags: 0x6, type: 0xc)
+		float AnchorExtentsMin; // 0x28 (size: 0x4, flags: 0x6, type: 0xc)
+		float AnchorExtentsMax; // 0x2c (size: 0x4, flags: 0x6, type: 0xc)
+		float AnchorOffsetMin; // 0x30 (size: 0x4, flags: 0x6, type: 0xc)
+		float AnchorOffsetMax; // 0x34 (size: 0x4, flags: 0x6, type: 0xc)
+	}; // size = 0x38
+}

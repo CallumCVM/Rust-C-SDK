@@ -1,0 +1,15 @@
+#pragma once
+
+namespace rust 
+{
+	class TOD_AtmosphereParameters : public Object // 0x0
+	{
+	public:
+		float RayleighMultiplier; // 0x10 (size: 0x4, flags: 0x6, type: 0xc)
+		float MieMultiplier; // 0x14 (size: 0x4, flags: 0x6, type: 0xc)
+		float Brightness; // 0x18 (size: 0x4, flags: 0x6, type: 0xc)
+		float Contrast; // 0x1c (size: 0x4, flags: 0x6, type: 0xc)
+		float Directionality; // 0x20 (size: 0x4, flags: 0x6, type: 0xc)
+		float Fogginess; // 0x24 (size: 0x4, flags: 0x6, type: 0xc)
+	}; // size = 0x28
+}

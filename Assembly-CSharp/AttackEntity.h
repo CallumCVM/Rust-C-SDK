@@ -1,0 +1,31 @@
+#pragma once
+
+#include "SoundDefinition.h"
+#include "..\UnityEngine\Vector3.h"
+
+namespace rust 
+{
+	class AttackEntity : public HeldEntity // 0x180
+	{
+	public:
+		SoundDefinition* reloadSounds; // 0x180 (size: 0x8, flags: 0x6, type: 0x1d)
+		float deployDelay; // 0x188 (size: 0x4, flags: 0x6, type: 0xc)
+		float repeatDelay; // 0x18c (size: 0x4, flags: 0x6, type: 0xc)
+		float effectiveRange; // 0x190 (size: 0x4, flags: 0x6, type: 0xc)
+		float npcDamageScale; // 0x194 (size: 0x4, flags: 0x6, type: 0xc)
+		float attackLengthMin; // 0x198 (size: 0x4, flags: 0x6, type: 0xc)
+		float attackLengthMax; // 0x19c (size: 0x4, flags: 0x6, type: 0xc)
+		float attackSpacing; // 0x1a0 (size: 0x4, flags: 0x6, type: 0xc)
+		float aiAimSwayOffset; // 0x1a4 (size: 0x4, flags: 0x6, type: 0xc)
+		float nextAttackTime; // 0x1a8 (size: 0x4, flags: 0x1, type: 0xc)
+		float lastTickTime; // 0x1ac (size: 0x4, flags: 0x1, type: 0xc)
+		float nextTickTime; // 0x1b0 (size: 0x4, flags: 0x1, type: 0xc)
+		float timeSinceDeploy; // 0x1b4 (size: 0x4, flags: 0x1, type: 0xc)
+		float recoilCompDelayOverride; // 0x1b8 (size: 0x4, flags: 0x6, type: 0xc)
+		bool wantsRecoilComp; // 0x1bc (size: 0x1, flags: 0x6, type: 0x2)
+		float lastRecoilCompTime; // 0x1c0 (size: 0x4, flags: 0x1, type: 0xc)
+		UnityEngine::Vector3 startAimingDirection; // 0x1c4 (size: 0xc, flags: 0x1, type: 0x11)
+		bool wasDoingRecoilComp; // 0x1d0 (size: 0x1, flags: 0x1, type: 0x2)
+		UnityEngine::Vector3 reductionSpeed; // 0x1d4 (size: 0xc, flags: 0x1, type: 0x11)
+	}; // size = 0x1e0
+}

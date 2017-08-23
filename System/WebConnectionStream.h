@@ -1,0 +1,43 @@
+#pragma once
+
+#include "..\System\Net\WebConnection.h"
+#include "..\System\Net\HttpWebRequest.h"
+#include "..\System\Threading\ManualResetEvent.h"
+#include "..\System\IO\MemoryStream.h"
+#include "..\System\Object.h"
+
+namespace System
+{
+	namespace Net
+{
+	class WebConnectionStream : public Stream // 0x18
+	{
+	public:
+		System::Net::WebConnection* cnc; // 0x18 (size: 0x8, flags: 0x1, type: 0x12)
+		System::Net::HttpWebRequest* request; // 0x20 (size: 0x8, flags: 0x1, type: 0x12)
+		unsigned char* readBuffer; // 0x28 (size: 0x8, flags: 0x1, type: 0x1d)
+		System::Threading::ManualResetEvent* pending; // 0x30 (size: 0x8, flags: 0x1, type: 0x12)
+		System::IO::MemoryStream* writeBuffer; // 0x38 (size: 0x8, flags: 0x1, type: 0x12)
+		unsigned char* headers; // 0x40 (size: 0x8, flags: 0x1, type: 0x1d)
+		System::Object locker; // 0x48 (size: 0x8, flags: 0x1, type: 0x1c)
+		bool isRead; // 0x50 (size: 0x1, flags: 0x1, type: 0x2)
+		int readBufferOffset; // 0x54 (size: 0x4, flags: 0x1, type: 0x8)
+		int readBufferSize; // 0x58 (size: 0x4, flags: 0x1, type: 0x8)
+		int contentLength; // 0x5c (size: 0x4, flags: 0x1, type: 0x8)
+		int totalRead; // 0x60 (size: 0x4, flags: 0x1, type: 0x8)
+		__int64 totalWritten; // 0x68 (size: 0x8, flags: 0x1, type: 0xa)
+		bool nextReadCalled; // 0x70 (size: 0x1, flags: 0x1, type: 0x2)
+		int pendingReads; // 0x74 (size: 0x4, flags: 0x1, type: 0x8)
+		int pendingWrites; // 0x78 (size: 0x4, flags: 0x1, type: 0x8)
+		bool allowBuffering; // 0x7c (size: 0x1, flags: 0x1, type: 0x2)
+		bool sendChunked; // 0x7d (size: 0x1, flags: 0x1, type: 0x2)
+		bool requestWritten; // 0x7e (size: 0x1, flags: 0x1, type: 0x2)
+		bool disposed; // 0x7f (size: 0x1, flags: 0x1, type: 0x2)
+		bool headersSent; // 0x80 (size: 0x1, flags: 0x1, type: 0x2)
+		bool initRead; // 0x81 (size: 0x1, flags: 0x1, type: 0x2)
+		bool read_eof; // 0x82 (size: 0x1, flags: 0x1, type: 0x2)
+		bool complete_request_written; // 0x83 (size: 0x1, flags: 0x1, type: 0x2)
+		int read_timeout; // 0x84 (size: 0x4, flags: 0x1, type: 0x8)
+		int write_timeout; // 0x88 (size: 0x4, flags: 0x1, type: 0x8)
+	}; // size = 0x90
+}

@@ -1,0 +1,19 @@
+#pragma once
+
+namespace System
+{
+	namespace Reflection
+{
+{
+		namespace Emit
+{
+	class SequencePoint : public ValueType // 0x0
+	{
+	public:
+		int Offset; // 0x10 (size: 0x4, flags: 0x6, type: 0x8)
+		int Line; // 0x14 (size: 0x4, flags: 0x6, type: 0x8)
+		int Col; // 0x18 (size: 0x4, flags: 0x6, type: 0x8)
+		int EndLine; // 0x1c (size: 0x4, flags: 0x6, type: 0x8)
+		int EndCol; // 0x20 (size: 0x4, flags: 0x6, type: 0x8)
+	}; // size = 0x28
+}

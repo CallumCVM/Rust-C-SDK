@@ -1,0 +1,15 @@
+#pragma once
+
+namespace rust 
+{
+	class CC_SharpenAndVignette : public CC_Base // 0x28
+	{
+	public:
+		bool applySharpen; // 0x28 (size: 0x1, flags: 0x6, type: 0x2)
+		float strength; // 0x2c (size: 0x4, flags: 0x6, type: 0xc)
+		float clamp; // 0x30 (size: 0x4, flags: 0x6, type: 0xc)
+		bool applyVignette; // 0x34 (size: 0x1, flags: 0x6, type: 0x2)
+		float sharpness; // 0x38 (size: 0x4, flags: 0x6, type: 0xc)
+		float darkness; // 0x3c (size: 0x4, flags: 0x6, type: 0xc)
+	}; // size = 0x40
+}

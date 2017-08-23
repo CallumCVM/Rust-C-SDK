@@ -1,0 +1,15 @@
+#pragma once
+
+namespace UnityEngine
+{
+	class LocationInfo : public ValueType // 0x0
+	{
+	public:
+		double m_Timestamp; // 0x10 (size: 0x8, flags: 0x1, type: 0xd)
+		float m_Latitude; // 0x18 (size: 0x4, flags: 0x1, type: 0xc)
+		float m_Longitude; // 0x1c (size: 0x4, flags: 0x1, type: 0xc)
+		float m_Altitude; // 0x20 (size: 0x4, flags: 0x1, type: 0xc)
+		float m_HorizontalAccuracy; // 0x24 (size: 0x4, flags: 0x1, type: 0xc)
+		float m_VerticalAccuracy; // 0x28 (size: 0x4, flags: 0x1, type: 0xc)
+	}; // size = 0x30
+}

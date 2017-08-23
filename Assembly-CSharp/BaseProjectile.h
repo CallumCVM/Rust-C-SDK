@@ -1,0 +1,54 @@
+#pragma once
+
+#include "GameObjectRef.h"
+#include "..\UnityEngine\Transform.h"
+#include "..\BaseProjectile\Magazine.h"
+#include "RecoilProperties.h"
+#include "..\UnityEngine\AnimationCurve.h"
+#include "ItemDefinition.h"
+#include "..\UnityEngine\List.h"
+
+namespace rust 
+{
+	class BaseProjectile : public AttackEntity // 0x1e0
+	{
+	public:
+		GameObjectRef* attackFX; // 0x1e0 (size: 0x8, flags: 0x6, type: 0x12)
+		GameObjectRef* silencedAttack; // 0x1e8 (size: 0x8, flags: 0x6, type: 0x12)
+		GameObjectRef* muzzleBrakeAttack; // 0x1f0 (size: 0x8, flags: 0x6, type: 0x12)
+		UnityEngine::Transform* MuzzlePoint; // 0x1f8 (size: 0x8, flags: 0x6, type: 0x12)
+		BaseProjectile::Magazine* primaryMagazine; // 0x200 (size: 0x8, flags: 0x6, type: 0x12)
+		RecoilProperties* recoil; // 0x208 (size: 0x8, flags: 0x6, type: 0x12)
+		UnityEngine::AnimationCurve* aimconeCurve; // 0x210 (size: 0x8, flags: 0x6, type: 0x12)
+		ItemDefinition* ammoTypePreReload; // 0x218 (size: 0x8, flags: 0x1, type: 0x12)
+		UnityEngine::List<Projectile>* createdProjectiles; // 0x220 (size: 0x8, flags: 0x1, type: 0x15)
+		float damageScale; // 0x228 (size: 0x4, flags: 0x6, type: 0xc)
+		float distanceScale; // 0x22c (size: 0x4, flags: 0x6, type: 0xc)
+		float projectileVelocityScale; // 0x230 (size: 0x4, flags: 0x6, type: 0xc)
+		bool automatic; // 0x234 (size: 0x1, flags: 0x6, type: 0x2)
+		float reloadTime; // 0x238 (size: 0x4, flags: 0x6, type: 0xc)
+		bool canUnloadAmmo; // 0x23c (size: 0x1, flags: 0x6, type: 0x2)
+		float aimSway; // 0x240 (size: 0x4, flags: 0x6, type: 0xc)
+		float aimSwaySpeed; // 0x244 (size: 0x4, flags: 0x6, type: 0xc)
+		float aimCone; // 0x248 (size: 0x4, flags: 0x6, type: 0xc)
+		float hipAimCone; // 0x24c (size: 0x4, flags: 0x6, type: 0xc)
+		float aimconePenaltyPerShot; // 0x250 (size: 0x4, flags: 0x6, type: 0xc)
+		float aimConePenaltyMax; // 0x254 (size: 0x4, flags: 0x6, type: 0xc)
+		float aimconePenaltyRecoverTime; // 0x258 (size: 0x4, flags: 0x6, type: 0xc)
+		float aimconePenaltyRecoverDelay; // 0x25c (size: 0x4, flags: 0x6, type: 0xc)
+		bool hasADS; // 0x260 (size: 0x1, flags: 0x6, type: 0x2)
+		bool noAimingWhileCycling; // 0x261 (size: 0x1, flags: 0x6, type: 0x2)
+		bool manualCycle; // 0x262 (size: 0x1, flags: 0x6, type: 0x2)
+		bool needsCycle; // 0x263 (size: 0x1, flags: 0x84, type: 0x2)
+		bool isCycling; // 0x264 (size: 0x1, flags: 0x84, type: 0x2)
+		bool aiming; // 0x265 (size: 0x1, flags: 0x86, type: 0x2)
+		float nextReloadTime; // 0x268 (size: 0x4, flags: 0x1, type: 0xc)
+		float aimconePenalty; // 0x26c (size: 0x4, flags: 0x1, type: 0xc)
+		bool isReloading; // 0x270 (size: 0x1, flags: 0x84, type: 0x2)
+		float resetDuration; // 0x274 (size: 0x4, flags: 0x6, type: 0xc)
+		int numShotsFired; // 0x278 (size: 0x4, flags: 0x6, type: 0x8)
+		float lastShotTime; // 0x27c (size: 0x4, flags: 0x1, type: 0xc)
+		float reloadPressTime; // 0x280 (size: 0x4, flags: 0x86, type: 0xc)
+		bool triggerReady; // 0x284 (size: 0x1, flags: 0x1, type: 0x2)
+	}; // size = 0x288
+}

@@ -1,0 +1,18 @@
+#pragma once
+
+#include "..\UnityEngine\UnicodeString*.h"
+
+namespace UnityEngine
+{
+	namespace Networking
+{
+{
+		namespace NetworkSystem
+{
+	class CRCMessageEntry : public ValueType // 0x0
+	{
+	public:
+		UnityEngine::UnicodeString* name; // 0x10 (size: 0x8, flags: 0x6, type: 0xe)
+		unsigned char channel; // 0x18 (size: 0x1, flags: 0x6, type: 0x5)
+	}; // size = 0x20
+}

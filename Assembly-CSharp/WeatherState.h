@@ -1,0 +1,13 @@
+#pragma once
+
+namespace rust 
+{
+	class WeatherState : public ValueType // 0x0
+	{
+	public:
+		float Clouds; // 0x10 (size: 0x4, flags: 0x6, type: 0xc)
+		float Fog; // 0x14 (size: 0x4, flags: 0x6, type: 0xc)
+		float Wind; // 0x18 (size: 0x4, flags: 0x6, type: 0xc)
+		float Rain; // 0x1c (size: 0x4, flags: 0x6, type: 0xc)
+	}; // size = 0x20
+}

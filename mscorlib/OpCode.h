@@ -1,0 +1,22 @@
+#pragma once
+
+namespace System
+{
+	namespace Reflection
+{
+{
+		namespace Emit
+{
+	class OpCode : public ValueType // 0x0
+	{
+	public:
+		unsigned char op1; // 0x10 (size: 0x1, flags: 0x3, type: 0x5)
+		unsigned char op2; // 0x11 (size: 0x1, flags: 0x3, type: 0x5)
+		unsigned char push; // 0x12 (size: 0x1, flags: 0x1, type: 0x5)
+		unsigned char pop; // 0x13 (size: 0x1, flags: 0x1, type: 0x5)
+		unsigned char size; // 0x14 (size: 0x1, flags: 0x1, type: 0x5)
+		unsigned char type; // 0x15 (size: 0x1, flags: 0x1, type: 0x5)
+		unsigned char args; // 0x16 (size: 0x1, flags: 0x1, type: 0x5)
+		unsigned char flow; // 0x17 (size: 0x1, flags: 0x1, type: 0x5)
+	}; // size = 0x18
+}
